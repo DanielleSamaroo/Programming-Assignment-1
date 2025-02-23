@@ -42,6 +42,7 @@ public class Client {
         String serverOutput = "";
         try {
             serverOutput = in.readUTF();
+            System.out.println(serverOutput);
         }catch (IOException i) {
             System.out.println(i);
         }
