@@ -56,7 +56,7 @@ public class client {
             return;
         }
         
-        String serverURL = args[0];
+        String serverNameOrIP = args[0];
         int portNumber = 5201; // Just set a default port number for the program in case user does not specify
         try {
             portNumber = Integer.parseInt(args[1]);
@@ -70,7 +70,7 @@ public class client {
         try {
             
             // Initial connection to the server
-            Socket socket = new Socket(serverURL, portNumber);
+            Socket socket = new Socket(serverNameOrIP, portNumber);
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             
